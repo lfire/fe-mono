@@ -1,7 +1,7 @@
 # @lfire/eslint-config-lib
 
 ```bash
-npm i -D @rush/eslint-config-monorepo
+npm i -D @lfire/eslint-config-lib
 ```
 
 依赖于 eslint-config-alloy
@@ -11,7 +11,7 @@ npm i -D @rush/eslint-config-monorepo
 ```js
 module.exports = {
   root: true,
-  extends: ['@rush/eslint-config-monorepo'],
+  extends: ['@lfire/eslint-config-lib'],
 };
 ```
 
@@ -22,7 +22,7 @@ module.exports = {
 ```js
 module.exports = {
   root: true,
-  extends: ['@rush/eslint-config-monorepo/ts'],
+  extends: ['@lfire/eslint-config-lib/ts'],
   parserOptions: {
     tsconfigRootDir: __dirname,
   },
@@ -36,6 +36,6 @@ module.exports = {
 ```js
 module.exports = {
   root: true,
-  extends: ['@rush/eslint-config-monorepo/vue'],
+  extends: ['@lfire/eslint-config-lib/vue'],
 };
 ```
