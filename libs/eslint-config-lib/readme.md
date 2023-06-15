@@ -1,7 +1,7 @@
 # @lfire/eslint-config-lib
 
 ```bash
-npm i -D @rush/eslint-config-monorepo
+npm i -D @lfire/eslint-config-lib
 ```
 
 依赖于 eslint-config-alloy
@@ -11,7 +11,7 @@ npm i -D @rush/eslint-config-monorepo
 ```js
 module.exports = {
   root: true,
-  extends: ['@rush/eslint-config-monorepo'],
+  extends: ['@lfire/eslint-config-lib'],
 };
 ```
 
@@ -22,20 +22,56 @@ module.exports = {
 ```js
 module.exports = {
   root: true,
-  extends: ['@rush/eslint-config-monorepo/ts'],
+  extends: ['@lfire/eslint-config-lib/ts'],
   parserOptions: {
     tsconfigRootDir: __dirname,
   },
 };
 ```
 
-支持 Vue2.x：
+支持 Vue：
 
-> 当前不支持 Vue3.x
+> 当前支持 Vue3.x，如若要支持 Vue2.x，请安装 `@lfire/eslint-config-lib@1`。
 
 ```js
 module.exports = {
   root: true,
-  extends: ['@rush/eslint-config-monorepo/vue'],
+  extends: ['@lfire/eslint-config-lib/vue'],
+};
+```
+
+支持 Vue TS 版：
+
+```js
+module.exports = {
+  root: true,
+  extends: ['@lfire/eslint-config-lib/vue-ts'],
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+  },
+};
+```
+
+支持 React：
+
+```js
+module.exports = {
+  root: true,
+  extends: ['@lfire/eslint-config-lib/react'],
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+  },
+};
+```
+
+支持 React TS 版：
+
+```js
+module.exports = {
+  root: true,
+  extends: ['@lfire/eslint-config-lib/react-ts'],
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+  },
 };
 ```
