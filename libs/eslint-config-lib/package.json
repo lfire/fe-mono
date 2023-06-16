@@ -4,7 +4,8 @@
   "description": "eslint config, witch surpport vue3.x",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo \"Msg: needn't\" && exit 0",
+    "test": "echo \"Msg: no test specified\" && exit 0"
   },
   "keywords": [
     "eslint"
