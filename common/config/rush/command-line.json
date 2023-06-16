@@ -14,6 +14,7 @@
     {
       "commandKind": "bulk",
       "name": "build",
+      "summary": "builds all projects",
       "allowWarningsInSuccessfulBuild": true,
       "enableParallelism": true,
       "ignoreMissingScript": false,
