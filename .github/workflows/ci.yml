@@ -30,4 +30,4 @@ jobs:
           export | grep NPM_AUTH_TOKEN
           node common/scripts/install-run-rush.js publish -p --include-all
         env:
-          NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
