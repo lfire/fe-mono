@@ -1,0 +1,17 @@
+{
+  "name": "@lfire/eslint-config-lib",
+  "entries": [
+    {
+      "version": "1.0.0",
+      "tag": "@lfire/eslint-config-lib_v1.0.0",
+      "date": "Tue, 04 Jul 2023 11:54:00 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "update ci config"
+          }
+        ]
+      }
+    }
+  ]
+}
