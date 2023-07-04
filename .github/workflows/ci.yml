@@ -26,4 +26,4 @@ jobs:
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose
       - name: Rush publish
-        run: node common/scripts/install-run-rush.js publish --include-all
+        run: node common/scripts/install-run-rush.js publish -p --include-all
