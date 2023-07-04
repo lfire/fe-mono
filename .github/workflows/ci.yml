@@ -20,10 +20,10 @@ jobs:
         with:
           node-version: 16
       - name: Verify Change Logs
-        run: node common/scripts/install-run-rush.js change --verify
+        run: node common/scripts/install-run-rush.js change --verify -b feature/eslint-config-lib-1.x
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose
       - name: Rush publish
-        run: node common/scripts/install-run-rush.js publish --include-all -b feature/eslint-config-lib-1.x 
+        run: node common/scripts/install-run-rush.js publish --include-all -b feature/eslint-config-lib-1.x
