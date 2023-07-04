@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lfire/eslint-config-lib",
+      "comment": "init a eslint config lib",
+      "type": "none"
+    }
+  ],
+  "packageName": "@lfire/eslint-config-lib"
+}
