@@ -1,9 +1,9 @@
 name: CI
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feature/eslint-config-lib-1.x" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "feature/eslint-config-lib-1.x" ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,3 +25,5 @@ jobs:
         run: node common/scripts/install-run-rush.js install
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose
+      - name: Rush publish
+        run: node common/scripts/install-run-rush.js publish --include-all -b feature/eslint-config-lib-1.x 
