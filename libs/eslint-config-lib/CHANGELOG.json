@@ -1,0 +1,17 @@
+{
+  "name": "@lfire/eslint-config-lib",
+  "entries": [
+    {
+      "version": "2.0.0",
+      "tag": "@lfire/eslint-config-lib_v2.0.0",
+      "date": "Wed, 05 Jul 2023 08:48:12 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "update eslint-config-alloy to surpport vue3.x"
+          }
+        ]
+      }
+    }
+  ]
+}

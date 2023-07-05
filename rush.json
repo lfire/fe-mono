@@ -415,5 +415,12 @@
     //   "reviewCategory": "tools",
     //   "tags": [ "tools" ]
     // }
+    {
+      "packageName": "@lfire/eslint-config-lib",
+      "projectFolder": "libs/eslint-config-lib",
+      "reviewCategory": "libs",
+      "shouldPublish": true,
+      "tags": ["libs", "eslint"]
+    }
   ]
 }
