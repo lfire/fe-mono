@@ -37,30 +37,13 @@ jobs:
         run: node common/scripts/install-run-rush.js update
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8.6.2
       - name: Rush publish
         run: |
-          pwd
-          node common/scripts/install-run-rush.js update
-          ls -all common/temp/pnpm-local
-          ls -all common/temp/pnpm-local/node_modules/.bin
           node common/scripts/install-run-rush.js publish -p --include-all --set-access-level public
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
   release:
-    needs: publish
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
