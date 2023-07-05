@@ -1,33 +1,66 @@
 name: CI
 on:
   push:
-    branches: [ "feature/eslint-config-lib-1.x" ]
-  pull_request:
-    branches: [ "feature/eslint-config-lib-1.x" ]
+    # branches: ["feature/eslint-config-lib-1.x"]
+    tags:
+      - "@**_v*"
+  # pull_request:
+  #   branches: ["feature/eslint-config-lib-1.x"]
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 2
-      - name: Git config user
-        uses: snow-actions/git-config-user@v1.0.0
-        with:
-          name: lfire # Service Account's Name
-          email: yunzhi.li.08@gmail.com # Service Account's Email Address
+      # - name: Git config user
+      #   uses: snow-actions/git-config-user@v1.0.0
+      #   with:
+      #     name: lfire
+      #     email: yunzhi.li.08@gmail.com
       - uses: actions/setup-node@v3
         with:
           node-version: 16
       - name: Verify Change Logs
         run: node common/scripts/install-run-rush.js change --verify -b feature/eslint-config-lib-1.x
+  build:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
       - name: Rush Install
         run: node common/scripts/install-run-rush.js install
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
       - name: Rush publish
         run: |
-          export | grep NPM_AUTH_TOKEN
           node common/scripts/install-run-rush.js publish -p --include-all --set-access-level public
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+  release:
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Create Release
+        run: npx changelogithub
