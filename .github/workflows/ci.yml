@@ -64,3 +64,5 @@ jobs:
           node-version: 16
       - name: Create Release
         run: npx changelogithub
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
