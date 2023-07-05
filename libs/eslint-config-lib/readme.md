@@ -4,7 +4,7 @@
 npm i -D @lfire/eslint-config-lib
 ```
 
-依赖于 eslint-config-alloy
+依赖于 [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy)
 
 配置：.eslintrc.js
 

@@ -1,6 +1,6 @@
 {
   "name": "@lfire/eslint-config-lib",
-  "version": "3.0.1",
+  "version": "1.0.0",
   "description": "eslint config, witch surpport vue3.x",
   "main": "index.js",
   "scripts": {
