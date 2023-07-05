@@ -53,8 +53,8 @@ jobs:
       - name: Rush publish
         run: |
           pwd
-          ls -all common/temp/pnpm-local/node_modules/.bin
           node common/scripts/install-run-rush.js update
+          ls -all common/temp/pnpm-local
           ls -all common/temp/pnpm-local/node_modules/.bin
           node common/scripts/install-run-rush.js publish -p --include-all --set-access-level public
         env:
