@@ -1,0 +1,25 @@
+{
+  "name": "fluent-api-serve",
+  "version": "1.0.0",
+  "description": "a fluent api demo serve",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~4.18.2",
+    "mockjs": "~1.1.0"
+  },
+  "devDependencies": {
+    "@lfire/eslint-config-lib": "~2.0.0",
+    "@babel/core": "^7.20.2",
+    "@babel/eslint-parser": "^7.19.1",
+    "eslint": "^8.27.0",
+    "eslint-config-alloy": "^4.7.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  }
+}

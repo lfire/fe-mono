@@ -421,6 +421,20 @@
       "reviewCategory": "libs",
       "shouldPublish": true,
       "tags": ["libs", "eslint"]
+    },
+    {
+      "packageName": "fluent-api-serve",
+      "projectFolder": "apps/fluent-api-serve",
+      "reviewCategory": "apps",
+      "shouldPublish": false,
+      "tags": ["app", "ai", "fluent"]
+    },
+    {
+      "packageName": "fluent-api-app",
+      "projectFolder": "apps/fluent-api-app",
+      "reviewCategory": "apps",
+      "shouldPublish": false,
+      "tags": ["app", "ai", "fluent", "vue3"]
     }
   ]
 }
